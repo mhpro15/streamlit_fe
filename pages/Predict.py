@@ -121,7 +121,7 @@ with st.form("my_form"):
             st.stop()
 
         response = requests.post(
-            "http://localhost:5001/predict",
+            "https://group1-comp377-groupproject-1.onrender.com/predict",
             headers={"Authorization": f"Bearer {token}"},
             json=input_data
         )
