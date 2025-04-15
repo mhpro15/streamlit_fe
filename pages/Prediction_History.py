@@ -18,7 +18,7 @@ st.set_page_config(
 st.title("Your Prediction History")
 st.sidebar.success(f"Go back to the landing page, make a prediction, or examine our data")
 
-API_BASE = "http://localhost:5001"
+API_BASE = "https://group1-comp377-groupproject-1.onrender.com"
 
 def map_age(age_code):
     age_map = {
