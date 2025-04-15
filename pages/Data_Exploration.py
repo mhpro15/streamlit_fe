@@ -1,5 +1,4 @@
 import streamlit as st
-from ucimlrepo import fetch_ucirepo
 import pandas as pd
 from matplotlib import pyplot as plt
 from pathlib import Path
@@ -30,15 +29,8 @@ if df_path.exists():
     df = pd.read_csv(df_path)
     st.write("✅ Loaded dataset from local CSV.")
 else:
-    st.write("📡 Downloading dataset from UCI ML Repo. This may take a few seconds...")
-    try:
-        cdc_diabetes_health_indicators = fetch_ucirepo(id=891)
-        df = cdc_diabetes_health_indicators.data.original
-        df.to_csv(df_path, index=False)
-        st.write("📥 Dataset downloaded and saved locally for future runs.")
-    except Exception as e:
-        st.error("❌ Failed to load dataset from both local file and UCI ML Repo.")
-        st.stop()
+    st.write("❌ Unable to load datase")
+    
 
 # data (as pandas dataframes)
 with st.container():
