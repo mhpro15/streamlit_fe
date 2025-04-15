@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 # Base URL of our Flask backend
-API_BASE = "http://localhost:5001"
+API_BASE = "https://group1-comp377-groupproject-1.onrender.com"
 
 # Initialize session state
 if 'access_token' not in st.session_state:
